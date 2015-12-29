@@ -49,5 +49,8 @@ class PagesController < ApplicationController
   end
 
   private
-  
+
+  def page_params
+    params.require(:page).permit(:subject_id, :name, :permalink, :position, :visible)
+  end
 end

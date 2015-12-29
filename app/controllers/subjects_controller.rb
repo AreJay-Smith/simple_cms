@@ -3,7 +3,7 @@ class SubjectsController < ApplicationController
   layout false
 
   def index
-    @subjects = Subject.sorted
+    @subject = Subject.sorted
   end
 
   def show

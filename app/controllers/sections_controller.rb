@@ -42,4 +42,12 @@ class SectionsController < ApplicationController
     @section = Section.find(params[:id]).destroy
     flash[:notice] = "Page was successfully destroyed!"
     redirect_to(:action => 'index')
+  end
+
+private
+
+  def section_params
+    params.require(:section).permit(:page_id, :name, :position, :visible, :content_type, :content)
+  end
+
 end
