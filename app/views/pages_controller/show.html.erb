@@ -1,0 +1,33 @@
+<% if !flash[:notice].blank? %>
+  <div class="notice">
+    <%= flash[:notice] %>
+  </div>
+  <% end %>
+
+<div class+"pages show">
+  <h2>Show Pages</h2>
+
+  <table class="listing" summary="Page detail view">
+    <tr>
+      <th>Subject ID</th>
+      <td><%= @page.subject_id %></td>
+    </tr>
+    <tr>
+      <th>Name</th>
+      <td><%= @page.name%></td>
+      </tr>
+      <tr>
+      <th>Permalink</th>
+      <td><%= @page.permalink %></td>
+    </tr>
+    <tr>
+      <th>Psoition</th>
+      <td><%= @page.position %></td>
+    </tr>
+    <tr>
+      <th>Visible?</th>
+      <td><%= @page.visible %></td>
+    </tr>
+  </table>
+  Have a nice day!
+</div>
